@@ -5,7 +5,7 @@ import 'package:learning_app/src/core/utils/app_images.dart';
 import 'package:learning_app/src/modules/home/view/home_view.dart';
 import 'package:learning_app/src/modules/onboarding/bloc/onboarding_bloc.dart';
 
-import '../../core/themes/app_styles.dart';
+import '../../../core/themes/app_styles.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({Key? key}) : super(key: key);

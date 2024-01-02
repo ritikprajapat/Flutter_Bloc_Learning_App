@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:learning_app/src/modules/onboarding/bloc/onboarding_bloc.dart';
-import 'package:learning_app/src/modules/onboarding/onboarding_view.dart';
+
+import 'src/modules/module.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             ),
             useMaterial3: false,
           ),
-          home: OnBoardingView(),
+          home: SplashView(),
         ),
       ),
     );
