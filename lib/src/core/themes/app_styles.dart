@@ -504,129 +504,129 @@ extension CustomStyles on TextTheme {
       );
 
   TextStyle get tsBlackRegular10 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w400,
         fontSize: 10,
       );
   TextStyle get tsBlackRegular12 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w400,
         fontSize: 12,
       );
   TextStyle get tsBlackRegular14 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w400,
         fontSize: 14,
       );
   TextStyle get tsBlackRegular16 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w400,
         fontSize: 16,
       );
   TextStyle get tsBlackRegular18 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w400,
         fontSize: 18,
       );
   TextStyle get tsBlackRegular20 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w400,
         fontSize: 20,
       );
   TextStyle get tsBlackRegular24 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w400,
         fontSize: 24,
       );
 
   TextStyle get tsBlackMedium10 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w500,
         fontSize: 10,
       );
   TextStyle get tsBlackMedium12 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w500,
         fontSize: 12,
       );
   TextStyle get tsBlackMedium14 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w500,
         fontSize: 14,
       );
   TextStyle get tsBlackMedium16 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w500,
         fontSize: 16,
       );
   TextStyle get tsBlackMedium18 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w500,
         fontSize: 18,
       );
   TextStyle get tsBlackMedium20 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w500,
         fontSize: 20,
       );
   TextStyle get tsBlackMedium24 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w500,
         fontSize: 24,
       );
 
   TextStyle get tsBlackSemiBold10 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w600,
         fontSize: 10,
       );
   TextStyle get tsBlackSemiBold12 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w600,
         fontSize: 12,
       );
   TextStyle get tsBlackSemiBold14 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w600,
         fontSize: 14,
       );
   TextStyle get tsBlackSemiBold16 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w600,
         fontSize: 16,
       );
   TextStyle get tsBlackSemiBold18 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w600,
         fontSize: 18,
       );
   TextStyle get tsBlackSemiBold20 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w600,
         fontSize: 20,
       );
   TextStyle get tsBlackSemiBold24 => TextStyle(
-        // color: AppColors.black,
+        color: Colors.black,
         fontFamily: AppTheme.fontFamily,
         fontWeight: FontWeight.w600,
         fontSize: 24,
@@ -1154,129 +1154,129 @@ class AppStyles {
   );
 
   static TextStyle tsBlackRegular10 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w400,
     fontSize: 10,
   );
   static TextStyle tsBlackRegular12 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w400,
     fontSize: 12,
   );
   static TextStyle tsBlackRegular14 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w400,
     fontSize: 14,
   );
   static TextStyle tsBlackRegular16 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w400,
     fontSize: 16,
   );
   static TextStyle tsBlackRegular18 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w400,
     fontSize: 18,
   );
   static TextStyle tsBlackRegular20 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w400,
     fontSize: 20,
   );
   static TextStyle tsBlackRegular24 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w400,
     fontSize: 24,
   );
 
   static TextStyle tsBlackMedium10 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w500,
     fontSize: 10,
   );
   static TextStyle tsBlackMedium12 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w500,
     fontSize: 12,
   );
   static TextStyle tsBlackMedium14 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w500,
     fontSize: 14,
   );
   static TextStyle tsBlackMedium16 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w500,
     fontSize: 16,
   );
   static TextStyle tsBlackMedium18 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w500,
     fontSize: 18,
   );
   static TextStyle tsBlackMedium20 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w500,
     fontSize: 20,
   );
   static TextStyle tsBlackMedium24 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w500,
     fontSize: 24,
   );
 
   static TextStyle tsBlackSemiBold10 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w600,
     fontSize: 10,
   );
   static TextStyle tsBlackSemiBold12 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w600,
     fontSize: 12,
   );
   static TextStyle tsBlackSemiBold14 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w600,
     fontSize: 14,
   );
   static TextStyle tsBlackSemiBold16 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w600,
     fontSize: 16,
   );
   static TextStyle tsBlackSemiBold18 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w600,
     fontSize: 18,
   );
   static TextStyle tsBlackSemiBold20 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w600,
     fontSize: 20,
   );
   static TextStyle tsBlackSemiBold24 = TextStyle(
-    // color: AppColors.black,
+    color: Colors.black,
     fontFamily: AppTheme.fontFamily,
     fontWeight: FontWeight.w600,
     fontSize: 24,

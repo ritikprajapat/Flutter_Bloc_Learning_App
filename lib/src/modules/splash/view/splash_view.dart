@@ -40,6 +40,17 @@ class _SplashViewState extends State<SplashView> {
               'Learning App',
               style: AppStyles.tsBlackMedium18,
             ),
+            SizedBox(height: 12),
+            Container(
+              width: 100,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: LinearProgressIndicator(
+                  backgroundColor: Colors.grey.withOpacity(.25),
+                  color: Colors.purple,
+                ),
+              ),
+            ),
           ],
         ),
       ),
