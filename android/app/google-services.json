@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "673688035017",
+    "project_id": "flutter-bloc-learning-app",
+    "storage_bucket": "flutter-bloc-learning-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673688035017:android:7ca52b1053b701903a3718",
+        "android_client_info": {
+          "package_name": "com.example.learning_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANYHjmGLxnYUFoBydJ9F6r4VKS4JcbCLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

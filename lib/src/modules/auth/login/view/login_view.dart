@@ -1,3 +1,5 @@
+import 'package:learning_app/src/modules/auth/signup/view/sign_up_view.dart';
+
 import '../../../../app/app.dart';
 
 class LoginView extends StatelessWidget {
@@ -8,16 +10,21 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          alignment: Alignment.center,
           padding: EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Login',
-                    style: AppStyles.tsBlackMedium24,
+                    'Welcome Back !',
+                    style: AppStyles.tsBlackSemiBold24,
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Login to continue',
+                    style: AppStyles.tsBlackMedium16,
                   ),
                   SizedBox(height: 18),
                   CommonTextField(
@@ -26,19 +33,25 @@ class LoginView extends StatelessWidget {
                   ),
                   CommonTextField(
                     hintText: 'Password',
-                    prefixIcon: Icon(Icons.lock ),
+                    prefixIcon: Icon(Icons.lock),
                     suffixIcon: IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.remove_red_eye,
+                        Icons.visibility,
                       ),
                     ),
-                    padding: EdgeInsets.only(bottom: 12),
+                    padding: EdgeInsets.only(bottom: 0),
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text('Forgot Password?'),
+                    child: Text(
+                      'Forgot Password?',
+                      style: AppStyles.tsBlackMedium14.copyWith(
+                        color: Colors.purple,
+                      ),
+                    ),
                   ),
+                  SizedBox(height: 12),
                   Row(
                     children: [
                       Expanded(
@@ -49,7 +62,7 @@ class LoginView extends StatelessWidget {
                       ),
                       Text(
                         '  To Continue with  ',
-                        style: AppStyles.tsBlackMedium16,
+                        style: AppStyles.tsBlackSemiBold16,
                       ),
                       Expanded(
                         child: Divider(
@@ -88,10 +101,25 @@ class LoginView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have account?"),
+                  Text(
+                    "Don't have account?",
+                    style: AppStyles.tsBlackSemiBold14,
+                  ),
                   TextButton(
-                    onPressed: () {},
-                    child: Text('Sign Up'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignUpView(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Sign Up',
+                      style: AppStyles.tsBlackSemiBold14.copyWith(
+                        color: Colors.purple,
+                      ),
+                    ),
                   ),
                 ],
               ),
