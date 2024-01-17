@@ -11,4 +11,14 @@ final class LoginInitial extends LoginState {
     this.email = "",
     this.password = "",
   });
+
+  LoginInitial copyWith({
+    String? email,
+    String? password,
+  }) {
+    return LoginInitial(
+      email: email ?? this.email,
+      password: password ?? this.password,
+    );
+  }
 }
