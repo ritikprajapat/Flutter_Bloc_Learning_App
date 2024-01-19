@@ -10,7 +10,8 @@ class LoginController {
     try {
       if (type == "email") {
         final state = context.read<LoginBloc>().state;
-        // var emaiAddress = state.email;
+        var emaiAddress = state.email;
+        var password = state.password;
       }
     } catch (e) {}
   }
