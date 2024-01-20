@@ -66,7 +66,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                             Text(
                               item.title,
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.tsMedium20,
+                              style: AppStyles.tsBlackMedium24,
                             ),
                             SizedBox(height: 24),
                             Text(

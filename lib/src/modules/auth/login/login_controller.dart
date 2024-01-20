@@ -1,17 +1,28 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:learning_app/src/app/app.dart';
-
-import 'bloc/login_bloc.dart';
 
 class LoginController {
   final BuildContext context;
   const LoginController(this.context);
 
-  void handleLogin(String type) {
+  Future<void> handleLogin(String type) async {
     try {
       if (type == "email") {
         final state = context.read<LoginBloc>().state;
-        var emaiAddress = state.email;
-        var password = state.password;
+        String? email = state.email;
+        String? password = state.password;
+
+        if (email!.isEmpty) {
+        } else if (password!.isEmpty) {}
+
+        try {
+          final credential =
+              await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password ?? '');
+          var user = credential.user;
+          if (user == null) {
+          } else if (!user.emailVerified) {}
+          if (user != null) {}
+        } catch (e) {}
       }
     } catch (e) {}
   }

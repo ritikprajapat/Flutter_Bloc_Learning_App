@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learning_app/src/modules/auth/signup/view/sign_up_view.dart';
 
 import '../modules/module.dart';
 
@@ -14,8 +13,15 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => OnboardingBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => OnboardingBloc(),
+        ),
+        BlocProvider(
+          create: (context) => LoginBloc(),
+        ),
+      ],
       child: MaterialApp(
         title: 'Learning App',
         debugShowCheckedModeBanner: false,
@@ -29,7 +35,7 @@ class App extends StatelessWidget {
           ),
           useMaterial3: false,
         ),
-        home: SignUpView(),
+        home: SplashView(),
         routes: {
           "loginView": (context) => LoginView(),
         },
