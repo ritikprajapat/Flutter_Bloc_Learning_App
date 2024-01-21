@@ -42,7 +42,7 @@ class _SplashViewState extends State<SplashView> {
             ),
             SizedBox(height: 12),
             Container(
-              width: 100,
+              width: 120,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(50),
                 child: LinearProgressIndicator(
