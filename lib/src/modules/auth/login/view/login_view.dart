@@ -1,3 +1,5 @@
+import 'package:learning_app/src/modules/auth/login/login_controller.dart';
+
 import '../../../../app/app.dart';
 
 class LoginView extends StatelessWidget {
@@ -100,7 +102,9 @@ class LoginView extends StatelessWidget {
                         ),
                         SizedBox(height: 36),
                         CommonFilledButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            LoginController(context).handleLogin('email');
+                          },
                           label: 'Login',
                         ),
                       ],

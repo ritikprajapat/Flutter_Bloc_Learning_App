@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:learning_app/src/app/app.dart';
 
@@ -13,23 +15,34 @@ class LoginController {
         String? password = state.password;
 
         if (email!.isEmpty) {
-        } else if (password!.isEmpty) {}
+          log('email Empty');
+        } else if (password!.isEmpty) {
+          log('password Empty');
+        }
 
         try {
-          final credential =
-              await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password ?? '');
+          final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+            email: email,
+            password: password ?? '',
+          );
           var user = credential.user;
           if (user == null) {
-          } else if (!user.emailVerified) {}
+            log('User does not exist');
+          } else if (!user.emailVerified) {
+            log('user Verified');
+          }
           if (user != null) {
-          } else {}
+            log('User Exist');
+          } else {
+            log('No User');
+          }
         } on FirebaseAuthException catch (e) {
           if (e.code == "user-not-found") {
-            print('No User');
+            log('No User');
           } else if (e.code == 'wrong-password') {
-            print('Wrong password provided');
+            log('Wrong password provided');
           } else if (e.code == 'invalid-email') {
-            print('Invalid Email');
+            log('Invalid Email');
           }
         }
       }
