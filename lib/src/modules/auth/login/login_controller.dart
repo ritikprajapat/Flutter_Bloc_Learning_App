@@ -11,38 +11,41 @@ class LoginController {
     try {
       if (type == "email") {
         final state = context.read<LoginBloc>().state;
-        String? email = state.email;
-        String? password = state.password;
+        String email = state.email ?? '';
+        String password = state.password ?? '';
 
-        if (email!.isEmpty) {
-          log('email Empty');
-        } else if (password!.isEmpty) {
-          log('password Empty');
+        if (email.isEmpty) {
+          SnackbarHelper.showSnackbar(context, 'Please enter your Email Address');
+        } else if (password.isEmpty) {
+          SnackbarHelper.showSnackbar(context, 'Please enter your Password');
         }
 
         try {
           final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
             email: email,
-            password: password ?? '',
+            password: password,
           );
           var user = credential.user;
+
           if (user == null) {
-            log('User does not exist');
+            SnackbarHelper.showSnackbar(context, "User doesn't exist");
           } else if (!user.emailVerified) {
-            log('user Verified');
+            SnackbarHelper.showSnackbar(context, 'Please verify your email account');
           }
+
           if (user != null) {
-            log('User Exist');
+            log('User exist');
           } else {
-            log('No User');
+            SnackbarHelper.showSnackbar(context, "You're not currently a user of this app");
           }
         } on FirebaseAuthException catch (e) {
-          if (e.code == "user-not-found") {
-            log('No User');
+          if (e.code == 'user-not-found') {
+            SnackbarHelper.showSnackbar(context, 'No user found for this email');
           } else if (e.code == 'wrong-password') {
-            log('Wrong password provided');
+            log('ff');
+            SnackbarHelper.showSnackbar(context, 'Incorrect password. Please check your password');
           } else if (e.code == 'invalid-email') {
-            log('Invalid Email');
+            SnackbarHelper.showSnackbar(context, 'Invalid Email');
           }
         }
       }

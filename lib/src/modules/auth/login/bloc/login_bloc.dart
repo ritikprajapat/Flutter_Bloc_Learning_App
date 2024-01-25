@@ -14,8 +14,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginInitial> {
     });
     on<PasswordEvent>((event, emit) {
       log('Password ${event.password}');
-
       emit(state.copyWith(password: event.password));
+    });
+    on<loginPasswordVisibleEvent>((event, emit) {
+      emit(state.copyWith(isPasswordVisible: !state.isPasswordVisible));
     });
   }
 }

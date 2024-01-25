@@ -108,6 +108,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                           Icons.chevron_right_rounded,
                         ),
                         onPressed: navigateToNextScreen,
+                        backgroundColor: Colors.purple,
                       ),
                     ),
                   ),

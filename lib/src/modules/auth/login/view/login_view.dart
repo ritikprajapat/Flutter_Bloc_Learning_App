@@ -1,5 +1,3 @@
-import 'package:learning_app/src/modules/auth/login/login_controller.dart';
-
 import '../../../../app/app.dart';
 
 class LoginView extends StatelessWidget {
@@ -32,22 +30,20 @@ class LoginView extends StatelessWidget {
                         ),
                         SizedBox(height: 18),
                         CommonTextField(
-                          onChanged: (value) {
-                            context.read<LoginBloc>().add(EmailEvent(value!));
-                          },
+                          onChanged: (value) => context.read<LoginBloc>().add(EmailEvent(value!)),
                           hintText: 'Email',
                           prefixIcon: Icon(Icons.email),
                         ),
                         CommonTextField(
-                          onChanged: (value) {
-                            context.read<LoginBloc>().add(PasswordEvent(value!));
-                          },
+                          onChanged: (value) => context.read<LoginBloc>().add(PasswordEvent(value!)),
+                          obscureText: !context.select((LoginBloc bloc) => bloc.state.isPasswordVisible),
                           hintText: 'Password',
                           prefixIcon: Icon(Icons.lock),
                           suffixIcon: IconButton(
-                            onPressed: () {},
+                            onPressed: () => context.read<LoginBloc>().add(loginPasswordVisibleEvent()),
                             icon: Icon(
-                              Icons.visibility,
+                              context.select((LoginBloc bloc) =>
+                                  bloc.state.isPasswordVisible ? Icons.visibility : Icons.visibility_off),
                             ),
                           ),
                           padding: EdgeInsets.only(bottom: 0),
@@ -118,14 +114,7 @@ class LoginView extends StatelessWidget {
                           style: AppStyles.tsBlackSemiBold14,
                         ),
                         TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => SignUpView(),
-                              ),
-                            );
-                          },
+                          onPressed: () => Navigator.pushNamed(context, "signUpView"),
                           child: Text(
                             'Sign Up',
                             style: AppStyles.tsBlackSemiBold14.copyWith(

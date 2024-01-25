@@ -12,3 +12,5 @@ class PasswordEvent extends LoginEvent {
   final String password;
   PasswordEvent(this.password);
 }
+
+class loginPasswordVisibleEvent extends LoginEvent {}
