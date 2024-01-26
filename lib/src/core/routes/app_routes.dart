@@ -1,3 +1,5 @@
+import 'package:learning_app/src/modules/dashboard/view/dashboard_view.dart';
+
 import '../../app/app.dart';
 
 class AppRoutes {
@@ -5,7 +7,7 @@ class AppRoutes {
     return {
       "loginView": (context) => LoginView(),
       "signUpView": (context) => SignUpView(),
-      "homeView": (context) => HomeView(),
+      "dashboard": (context) => DashboardView(),
     };
   }
 }
