@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learning_app/src/app/bloc_providers.dart';
-import 'package:learning_app/src/modules/dashboard/view/dashboard_view.dart';
 
 import '../core/core.dart';
 import '../modules/module.dart';
 
 export 'package:flutter/material.dart';
-export 'package:flutter_bloc/flutter_bloc.dart';
+export 'package:flutter_bloc/flutter_bloc.dart'; 
 export '../modules/module.dart';
 export '../core/core.dart';
 
@@ -31,7 +30,7 @@ class App extends StatelessWidget {
           ),
           useMaterial3: false,
         ),
-        home: DashboardView(),
+        home: SplashView(),
         routes: AppRoutes.getRoutes(),
       ),
     );

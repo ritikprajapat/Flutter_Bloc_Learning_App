@@ -35,6 +35,7 @@ class LoginController {
 
           if (user != null) {
             log('User exist');
+            Navigator.pushNamedAndRemoveUntil(context, 'dashboard', (route) => false);
           } else {
             SnackbarHelper.showSnackbar(context, "You're not currently a user of this app");
           }

@@ -11,5 +11,8 @@ class AppBlocProviders {
         BlocProvider(
           create: (context) => SignupBloc(),
         ),
+        BlocProvider(
+          create: (context) => DashboardBloc(),
+        ),
       ];
 }

@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:learning_app/global.dart';
 import 'package:learning_app/src/app/app.dart';
 
 class OnBoardingView extends StatefulWidget {
@@ -23,6 +26,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   }
 
   void navigateToSignin() {
+    Global.storageService.setBool('device_first_open', true);
+    log('Device first ${Global.storageService.getDeviceFirstOpen()}');
     Navigator.of(context).pushNamedAndRemoveUntil("loginView", (route) => false);
   }
 

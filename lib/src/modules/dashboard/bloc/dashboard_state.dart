@@ -1,11 +1,8 @@
 part of 'dashboard_bloc.dart';
 
-@immutable
-sealed class DashboardState {}
-
-final class DashboardInitial extends DashboardState {
+final class DashboardState {
   final int index;
-  DashboardInitial({
+  DashboardState({
     this.index = 0,
   });
 }

@@ -15,52 +15,16 @@ class _DashboardViewState extends State<DashboardView> {
       builder: (context, state) {
         return Scaffold(
           body: SafeArea(
-            child: buildPage(currentIndex),
+            child: buildPage(state.index),
           ),
           bottomNavigationBar: BottomNavigationBar(
-            currentIndex: currentIndex,
+            currentIndex: state.index,
             onTap: (value) => context.read<DashboardBloc>().add(IndexEvent(value)),
             elevation: 0,
             type: BottomNavigationBarType.fixed,
             showSelectedLabels: false,
             showUnselectedLabels: false,
-            items: [
-              BottomNavigationBarItem(
-                label: 'Home',
-                icon: Icon(
-                  Icons.home,
-                  size: 28,
-                ),
-              ),
-              BottomNavigationBarItem(
-                label: 'Search',
-                icon: Icon(
-                  Icons.search,
-                  size: 28,
-                ),
-              ),
-              BottomNavigationBarItem(
-                label: 'Courses',
-                icon: Icon(
-                  Icons.play_arrow,
-                  size: 28,
-                ),
-              ),
-              BottomNavigationBarItem(
-                label: 'Messages',
-                icon: Icon(
-                  Icons.message_rounded,
-                  size: 28,
-                ),
-              ),
-              BottomNavigationBarItem(
-                label: 'Profile',
-                icon: Icon(
-                  Icons.person,
-                  size: 28,
-                ),
-              ),
-            ],
+            items: bottomTabs,
           ),
         );
       },
@@ -76,13 +40,13 @@ class _DashboardViewState extends State<DashboardView> {
         child: Text('Search'),
       ),
       Center(
+        child: Text('Courses'),
+      ),
+      Center(
+        child: Text('Chat'),
+      ),
+      Center(
         child: Text('Profile'),
-      ),
-      Center(
-        child: Text('Settings'),
-      ),
-      Center(
-        child: Text('Settings'),
       ),
     ];
     return pages[index];
