@@ -1,8 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
-import 'package:learning_app/src/core/themes/app_styles.dart';
-import 'package:learning_app/src/modules/onboarding/view/onboarding_view.dart';
+import '../../../app/app.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -16,12 +14,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 2), () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => OnBoardingView(),
-        ),
-      );
+      Navigator.pushNamed(context, "/onboarding");
     });
   }
 

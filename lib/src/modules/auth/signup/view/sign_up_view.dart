@@ -82,7 +82,7 @@ class _SignUpViewState extends State<SignUpView> {
                           style: AppStyles.tsBlackSemiBold14,
                         ),
                         TextButton(
-                          onPressed: () => Navigator.pushNamed(context, "loginView"),
+                          onPressed: () => Navigator.pushNamed(context, "/login"),
                           child: Text(
                             'Login',
                             style: AppStyles.tsBlackSemiBold14.copyWith(

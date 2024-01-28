@@ -33,7 +33,7 @@ class SignupController {
         await credential.user?.sendEmailVerification();
         await credential.user?.updateDisplayName(userName);
         SnackbarHelper.showSnackbar(context, 'An Email has been sent to your registered email.');
-        Navigator.of(context).pop();
+        Navigator.pop(context);
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == "weak-password") {

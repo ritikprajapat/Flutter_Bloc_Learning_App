@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learning_app/src/app/bloc_providers.dart';
 
 import '../core/core.dart';
-import '../modules/module.dart';
 
 export 'package:flutter/material.dart';
-export 'package:flutter_bloc/flutter_bloc.dart'; 
+export 'package:flutter_bloc/flutter_bloc.dart';
 export '../modules/module.dart';
 export '../core/core.dart';
 
@@ -16,7 +14,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: AppBlocProviders.allBlocProviders,
+      providers: [
+        ...AppPages.allBlocsProviders(context),
+      ],
       child: MaterialApp(
         title: 'Learning App',
         debugShowCheckedModeBanner: false,
@@ -30,8 +30,7 @@ class App extends StatelessWidget {
           ),
           useMaterial3: false,
         ),
-        home: SplashView(),
-        routes: AppRoutes.getRoutes(),
+        onGenerateRoute: AppPages.GenerateRouteSettings,
       ),
     );
   }

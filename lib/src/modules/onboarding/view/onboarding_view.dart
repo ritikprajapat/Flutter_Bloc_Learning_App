@@ -28,7 +28,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   void navigateToSignin() {
     Global.storageService.setBool('device_first_open', true);
     log('Device first ${Global.storageService.getDeviceFirstOpen()}');
-    Navigator.of(context).pushNamedAndRemoveUntil("loginView", (route) => false);
+    Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => false);
   }
 
   @override

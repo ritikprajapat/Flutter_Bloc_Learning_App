@@ -114,7 +114,7 @@ class LoginView extends StatelessWidget {
                           style: AppStyles.tsBlackSemiBold14,
                         ),
                         TextButton(
-                          onPressed: () => Navigator.pushNamed(context, "signUpView"),
+                          onPressed: () => Navigator.pushNamed(context, "/signup"),
                           child: Text(
                             'Sign Up',
                             style: AppStyles.tsBlackSemiBold14.copyWith(
