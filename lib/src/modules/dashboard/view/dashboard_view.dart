@@ -1,14 +1,8 @@
 import 'package:learning_app/src/app/app.dart';
 
-class DashboardView extends StatefulWidget {
+class DashboardView extends StatelessWidget {
   const DashboardView({Key? key}) : super(key: key);
 
-  @override
-  _DashboardViewState createState() => _DashboardViewState();
-}
-
-class _DashboardViewState extends State<DashboardView> {
-  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<DashboardBloc, DashboardState>(
@@ -33,9 +27,7 @@ class _DashboardViewState extends State<DashboardView> {
 
   Widget buildPage(int index) {
     List pages = [
-      Center(
-        child: Text('Home'),
-      ),
+      HomeView(),
       Center(
         child: Text('Search'),
       ),

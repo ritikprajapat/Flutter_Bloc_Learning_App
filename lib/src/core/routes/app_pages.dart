@@ -51,6 +51,13 @@ class AppPages {
           create: (context) => DashboardBloc(),
         ),
       ),
+      PageEntity(
+        route: AppRoutes.home,
+        page: HomeView(),
+        bloc: BlocProvider(
+          create: (context) => HomeBloc(),
+        ),
+      ),
     ];
   }
 

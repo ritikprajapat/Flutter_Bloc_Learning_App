@@ -31,7 +31,7 @@ class LoginController {
           } else if (!user.emailVerified) {
             SnackbarHelper.showSnackbar(context, 'Please verify your email account');
           }
-
+ 
           if (user != null) {
             log('User exist');
             Global.storageService.setString(AppConstants.userToken, "12345678");
@@ -45,7 +45,7 @@ class LoginController {
           } else if (e.code == 'wrong-password') {
             log('ff');
             SnackbarHelper.showSnackbar(context, 'Incorrect password. Please check your password');
-          } else if (e.code == 'invalid-email') {  
+          } else if (e.code == 'invalid-email') {
             log('Invaild');
             SnackbarHelper.showSnackbar(context, 'Invalid Email');
           }
