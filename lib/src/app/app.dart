@@ -3,10 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../core/core.dart';
 
-export 'package:flutter/material.dart';
-export 'package:flutter_bloc/flutter_bloc.dart';
-export '../modules/module.dart';
 export '../core/core.dart';
+export '../modules/module.dart';
+export 'package:flutter/material.dart';
+export 'package:learning_app/global.dart';
+export 'package:flutter_bloc/flutter_bloc.dart';
+export 'package:firebase_auth/firebase_auth.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

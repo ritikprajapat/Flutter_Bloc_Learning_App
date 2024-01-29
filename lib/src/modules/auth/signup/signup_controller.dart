@@ -1,4 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:developer';
+
 import 'package:learning_app/src/app/app.dart';
 
 class SignupController {
@@ -41,6 +42,7 @@ class SignupController {
       } else if (e.code == "email-already-in-use") {
         SnackbarHelper.showSnackbar(context, 'The email is already in  use');
       } else if (e.code == "invalid-email") {
+        log('Invaild');
         SnackbarHelper.showSnackbar(context, 'your email id is invalid email');
       }
     }

@@ -1,3 +1,4 @@
+import 'package:learning_app/src/app/app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageService {
@@ -12,7 +13,15 @@ class StorageService {
     return await _preferences.setBool(key, value);
   }
 
+  Future<bool> setString(String key, String value) async {
+    return await _preferences.setString(key, value);
+  }
+
   bool getDeviceFirstOpen() {
-    return _preferences.getBool('device_first_open') ?? false;
+    return _preferences.getBool(AppConstants.deviceFirstOpen) ?? false;
+  }
+
+  bool getIsLoggedIn() {
+    return _preferences.getString(AppConstants.userToken) == null ? false : true;
   }
 }

@@ -2,6 +2,17 @@ import 'dart:developer';
 
 import 'package:learning_app/src/app/app.dart';
 
+class PageEntity {
+  String? route;
+  Widget? page;
+  dynamic bloc;
+  PageEntity({
+    this.route,
+    this.page,
+    this.bloc,
+  });
+}
+
 class AppPages {
   static List<PageEntity> routes() {
     return [
@@ -55,23 +66,21 @@ class AppPages {
     if (settings.name != null) {
       var result = routes().where((element) => element.route == settings.name);
       if (result.isNotEmpty) {
-        log('Valid Route ${settings.name}');
+        log('First Log');
+        log(result.first.route ?? '');
+        bool deviceFirstOpen = Global.storageService.getDeviceFirstOpen();
+        if (result.first.route == AppRoutes.initial && deviceFirstOpen) {
+          bool isLoggedIn = Global.storageService.getIsLoggedIn();
+          if (isLoggedIn) {
+            return MaterialPageRoute(builder: (_) => DashboardView(), settings: settings);
+          }
+          log('Second Log');
+          return MaterialPageRoute(builder: (_) => LoginView(), settings: settings);
+        }
         return MaterialPageRoute(builder: (_) => result.first.page ?? LoginView(), settings: settings);
       }
     }
     log('InValid Route ${settings.name}');
-
     return MaterialPageRoute(builder: (_) => LoginView(), settings: settings);
   }
-}
-
-class PageEntity {
-  String? route;
-  Widget? page;
-  dynamic bloc;
-  PageEntity({
-    this.route,
-    this.page,
-    this.bloc,
-  });
 }
