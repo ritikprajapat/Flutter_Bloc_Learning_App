@@ -1,5 +1,4 @@
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:flutter/material.dart';
 import 'package:learning_app/src/app/app.dart';
 
 class HomeView extends StatelessWidget {
